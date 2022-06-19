@@ -16,7 +16,7 @@
     </ul>
   </nav>
   <div class="conatiner todoListPage vhContainer">
-    <div class="todoList_Content">
+    <div class="todoList_Content" v-if="nickname">
       <div class="inputBox">
         <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
         <input type="text" class="js-todoContent" placeholder="請輸入待辦事項" v-model="todoContent">
@@ -53,12 +53,18 @@
         </div>
       </div>
     </div>
+    <h2 v-else>請先登入</h2>
   </div>
 </div>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
+
+h2 {
+  font-size: 72px;
+  text-align: center;
+}
 
 </style>
 
